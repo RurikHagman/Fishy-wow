@@ -1,9 +1,5 @@
 from PIL import Image
-import matplotlib.pyplot as plt
 
-
-
-squares = [[] for _ in range(16)]
 
 def calc():
     
@@ -16,13 +12,7 @@ def calc():
             r, g, b = rgb_values[pixel_index]
             
             if r > 140 and g > 140 and b > 140:
-                return x, y  # Return the first coordinates meeting the condition
+                return x, y  
     
-    return 0, 0  # Return default coordinates if no coordinates meet the condition
-            
-            
-            #Append the sum of RGB values to the corresponding square's list
-            #square_index = (y // 50) * 4 + (x // 50)
-            #squares[square_index].append(sum_rgb)
-
+    return 0, 0  
     

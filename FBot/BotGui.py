@@ -1,6 +1,4 @@
 import tkinter as tk
-import PIL
-import matplotlib.pyplot as plt
 import time
 import threading
 
