@@ -50,6 +50,7 @@ def startButtonCommand():
     first_cast(xPos - 1, yPos - 1)
 
     prev_x, prev_y = 0, 0
+    time_prev_cast = 0;
     
     while not stop_event.is_set():
         
@@ -57,11 +58,13 @@ def startButtonCommand():
         xPos, yPos = getWindowPos()
         x, y = calc()
         
-        if x == 0 and y == 0 and prev_x != 0 and prev_y != 0: 
+        if (x == 0 and y == 0 and prev_x != 0 and prev_y != 0) or time_prev_cast > 180: 
             interact(prev_x + xPos -5, prev_y + yPos + 35)
+            time_prev_cast = 0
 
         prev_x = x
         prev_y = y
+        time_prev_cast += 1
         time.sleep(0.10)
         
 
