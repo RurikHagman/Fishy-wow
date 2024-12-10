@@ -1,1 +1,1 @@
-Simple wow fishing bot, made as a proof of concept 
+Simple wow fishing bot, made for educational purposes as a proof of concept 
